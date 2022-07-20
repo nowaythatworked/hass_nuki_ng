@@ -310,8 +310,7 @@ class NukiCoordinator(DataUpdateCoordinator):
             DOMAIN,
             "bridge",
             hook_id,
-            handler=self._make_bridge_hook_handler(),
-            local_only=True,
+            self._make_bridge_hook_handler(),
         )
 
     def _add_update(self, dev_id: str, update):
